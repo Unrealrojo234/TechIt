@@ -1,5 +1,6 @@
 <script>
 	import SlideShow from './SlideShow.svelte';
+	import Contacts from '../Contacts/contacts.svelte';
 </script>
 
 <main class="container-fluid">
@@ -15,6 +16,7 @@
 		commitment to creating impactful tech solutions.
 	</p>
 	<SlideShow />
+	<Contacts />
 </main>
 
 <style>
@@ -28,5 +30,9 @@
 	}
 	p {
 		font-size: larger;
+	}
+
+	main {
+		max-width: 68rem;
 	}
 </style>
