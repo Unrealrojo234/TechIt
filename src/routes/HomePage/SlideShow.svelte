@@ -12,7 +12,8 @@
 		'WritersWeb',
 		'batsonnoah58',
 		'J-ohnP-aul',
-		'OTIENO272'
+		'OTIENO272',
+		'Rosalie-p'
 	];
 
 	let usersDetailsObject = writable([]);
