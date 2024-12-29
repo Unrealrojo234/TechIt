@@ -1,6 +1,7 @@
 <script>
 	import SlideShow from './SlideShow.svelte';
 	import Contacts from '../Contacts/contacts.svelte';
+	import Skills from './Skills/Skills.svelte';
 </script>
 
 <main class="container-fluid">
@@ -16,6 +17,7 @@
 		commitment to creating impactful tech solutions.
 	</p>
 	<SlideShow />
+	<Skills />
 	<Contacts />
 </main>
 

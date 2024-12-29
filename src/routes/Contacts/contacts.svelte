@@ -23,7 +23,7 @@
 								type="text"
 								placeholder="Your name"
 								style="background-color: #222428;"
-								class="form-control bg-opacity-25 border-secondary"
+								class="form-control bg-opacity-25"
 							/>
 						</div>
 						<div class="col-sm-6">
@@ -31,7 +31,7 @@
 								type="email"
 								style="background-color: #222428;"
 								placeholder="Email address"
-								class="form-control border-secondary"
+								class="form-control"
 							/>
 						</div>
 					</div>
@@ -40,19 +40,14 @@
 						<textarea
 							placeholder="Write message"
 							style="background-color: #222428;min-height: 200px;"
-							class="form-control border-secondary"
+							class="form-control"
 						></textarea>
 					</div>
 
-					<button
-						type="submit"
-						class="btn w-100 mt-3 text-white"
-						style="background: linear-gradient(45deg, teal,green, lime);"
-					>
-						Send it to the moon
-					</button>
+					<button type="submit" class="btn w-100 mt-3 text-white"> Send it to the moon </button>
 				</div>
 			</form>
+			<br /><br />
 		</div>
 
 		<!-- Image
@@ -77,5 +72,12 @@
 	}
 	p {
 		font-size: larger;
+	}
+	button {
+		border: 1px solid teal;
+	}
+	input,
+	textarea {
+		border: 1px solid teal;
 	}
 </style>
