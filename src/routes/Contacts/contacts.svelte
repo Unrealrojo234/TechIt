@@ -22,14 +22,14 @@
 							<input
 								type="text"
 								placeholder="Your name"
-								style="background-color: #222428;"
+								style="background-color: #0c0c0c;"
 								class="form-control bg-opacity-25"
 							/>
 						</div>
 						<div class="col-sm-6">
 							<input
 								type="email"
-								style="background-color: #222428;"
+								style="background-color: #0c0c0c;"
 								placeholder="Email address"
 								class="form-control"
 							/>
@@ -39,7 +39,7 @@
 					<div class="mt-3">
 						<textarea
 							placeholder="Write message"
-							style="background-color: #222428;min-height: 200px;"
+							style="background-color: #0c0c0c;min-height: 200px;"
 							class="form-control"
 						></textarea>
 					</div>
@@ -65,7 +65,7 @@
 <style>
 	/* Add any additional custom styles here if needed */
 	:global(.form-control:focus) {
-		background-color: #222428;
+		background-color: none;
 		border-color: teal;
 		box-shadow: none;
 		color: aliceblue;
