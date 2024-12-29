@@ -66,9 +66,12 @@
 			<!-- Multiple items -->
 			<div class="scroll-container gradient-edges pause-on-hover">
 				<div class="scroll-text scroll-multiple">
-					{#each skills as skill}
-						<img src={skill.logo} alt={skill.name} />
-					{/each}
+					<!-- svelte-ignore a11y_distracting_elements -->
+					<marquee behavior="scroll" direction="left">
+						{#each skills as skill}
+							<img src={skill.logo} alt={skill.name} />
+						{/each}
+					</marquee>
 				</div>
 			</div>
 		{:catch error}
@@ -98,14 +101,6 @@
 		overflow: hidden;
 		position: relative;
 		width: 100%;
-	}
-
-	/* Horizontal scrolling */
-	.scroll-text {
-		white-space: nowrap;
-		animation: scrollText 20s linear infinite;
-		display: inline-block;
-		padding: 10px;
 	}
 
 	@keyframes scrollText {
