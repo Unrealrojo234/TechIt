@@ -1,40 +1,20 @@
 <script>
 	import { onMount } from 'svelte';
 
-	let skills = [];
+	let skills = $state([]);
 
-	onMount(async () => {
-		const skillFiles = [
-			{ name: 'Android', logo: '/android.svg' },
-			{ name: 'html', logo: '/html5.svg' },
-			{ name: 'Bootstrap', logo: '/bootstrap5.svg' },
-			{ name: 'css', logo: '/css.svg' },
-			{ name: 'chromium', logo: '/chromium.svg' },
-			{ name: 'brave', logo: '/brave.svg' },
-			{ name: 'firefox', logo: '/firefox.svg' },
-			{ name: 'React', logo: '/reactjs.svg' },
-			{ name: 'jquery', logo: '/jquery.svg' },
-			{ name: 'svelte', logo: '/sveltejs.svg' },
-			{ name: 'javascript', logo: '/javascript.svg' },
-			{ name: 'kotlin', logo: '/kotlin.svg' },
-			{ name: 'nodejs', logo: '/nodejs.svg' },
-			{ name: 'express', logo: '/expressjs-light.svg' },
-			{ name: 'python', logo: '/python.svg' },
-			{ name: 'supabase', logo: '/supabase.svg' },
-			{ name: 'sublime', logo: '/sublime.svg' },
-			{ name: 'git', logo: '/git.svg' },
-			{ name: 'github', logo: '/github-light.svg' },
-			{ name: 'linux', logo: '/linux.svg' },
-			{ name: 'mongodb', logo: '/mongodb.svg' },
-			{ name: 'flask', logo: '/flask-light.svg' },
-			{ name: 'java', logo: '/java.svg' },
-			{ name: 'c', logo: '/c.svg' },
-			{ name: 'docker', logo: '/docker.svg' },
-			{ name: 'prettier', logo: '/prettier.svg' }
+	let images_api = 'https://image-server-mu.vercel.app/serve_all_images';
 
-			// Add more skills here
-		];
-		skills = skillFiles;
+	$effect(() => {
+		fetch(images_api)
+			.then((res) => res.json())
+			.then((data) => {
+				skills = data;
+				console.log(data);
+			})
+			.catch((error) => {
+				console.error(error);
+			});
 	});
 </script>
 
@@ -69,7 +49,7 @@
 					<!-- svelte-ignore a11y_distracting_elements -->
 					<marquee behavior="scroll" direction="left">
 						{#each skills as skill}
-							<img src={skill.logo} alt={skill.name} />
+							<img src={skill.url} alt={skill.name} />
 						{/each}
 					</marquee>
 				</div>
