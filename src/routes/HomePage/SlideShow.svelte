@@ -13,7 +13,8 @@
 		'batsonnoah58',
 		'J-ohnP-aul',
 		'OTIENO272',
-		'Rosalie-p'
+		'Rosalie-p',
+		'Mary-desig'
 	];
 
 	let usersDetailsObject = writable([]);
