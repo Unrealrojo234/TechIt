@@ -27,12 +27,12 @@
 	<br /><br />
 	<div class="row align-items-center g-4">
 		<!-- Form Area -->
+		<h1 style="color: yellowgreen;">Let's connect constellations</h1>
 		<div class="col-lg-8">
 			<form onsubmit={sendEmail}>
 				<div class="col-lg-10 mx-auto">
 					<div class="text-white">
-						<h1 class="fs-2 fw-semibold lh-base">Let's connect constellations</h1>
-						<p class="small mt-2 mb-4">
+						<p>
 							Let's align our constellations! Reach out and let the magic of collaboration
 							illuminate our skies.
 						</p>
